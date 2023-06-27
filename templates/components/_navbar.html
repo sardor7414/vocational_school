@@ -1,0 +1,45 @@
+{% load static %}
+<section class="header" style="background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('{% static 'blog/img/banner.jpg' %}');">
+    <nav>
+        <a href="https://edu.uz/uz"><img src="{% static 'blog/img/logo.png' %}" alt="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="#facilities">YANGILIKLAR</a></li>
+                <li><a href="https://edu.uz/uz">BIZ HAQIMIZDA</a></li>
+                <li><a href="">TUZILMA</a></li>
+                <li><a href="#">YO'NALISHLAR</a></li>
+                <li><a href="">ALOQA</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Baxmal tuman 1-son kasb hunar maktabi</h1>
+        <p>Zamonaviy kasblarni biz bilan egallang!</p>
+        <a href="https://edu.uz/uz" class="hero-btn">Yanada ko'proq biling</a>
+    </div>
+
+    <div class="boxshow" id="boxshow">
+        <i class="fa fa-times" onclick="showbox()" aria-hidden="true"></i>
+        <div class="grid">
+
+
+            <div><img src="{% static 'blog/img/prava.jpg' %}" alt="">
+            </div>
+            <div class="text-prav">
+                <p>Haydovchilik guvohnomasiga ega bo'lishni xohlaysizmi?</p>
+                <p>Endi bizning maktabimizda "B" yoki "BC" toifali xaydovchilik kurslari mavjud.
+                    Siz eng so'nggi talablar asosida jihozlangan o'quv - amaliyot xonalarida,
+                    malakali o'qituvchi va instruktorlar yordamida yo'l harakati qoidalari, harakat xavfsizligi,
+                    avtomobillar tuzilish, avtomobillarni boshqarish kabi nazariy hamda amaliy ko'nikmalarga
+                    ega bo'lasiz!
+                </p>
+                <p><b> Manzil:</b> O'smat shahri, H.Olimjon ko'chasi 43-uy</p>
+                <p><b>Telefonlar:</b> +998932950576, +998972950444, +998973261363</p>
+            </div>
+        </div>
+
+    </div>
+</section>

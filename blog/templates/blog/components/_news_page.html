@@ -1,0 +1,44 @@
+{% load static %}
+<section class="facilities">
+    <h1>Yangiliklar</h1>
+    <p>
+        Kasb hunar maktabidagi so'nggi yangiliklar!
+    </p>
+
+    <div class="row">
+        {% for article in articles.object_list %}
+        <div class="facilities-col">
+            <a href=""><img src="{{ article.get_photo }}"></a>
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.description}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination block -->
+    <div aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {% if articles.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{articles.previous_page_number}}">Oldingi</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#">Oldingi</a>
+            </li>
+            {% endif %}
+            <li class="page-item"><a class="page-link" href="">{{ articles.number }}</a></li>
+           {% if articles.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{articles.next_page_number}}">Keyingi</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#">Keyingi</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+</section>

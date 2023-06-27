@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+<!------Yangiliklar------>
+{% include 'blog/components/_news.html' %}
+
+
+<!--- campus--->
+{% include 'blog/components/_campus.html' %}
+
+
+<!----Yangiliklar katta blog--->
+{% include 'blog/components/_news_page.html' %}
+
+
+<!-----Test----->
+{% include 'blog/components/_test.html' %}
+
+
+{% endblock main %}
